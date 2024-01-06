@@ -1,0 +1,114 @@
+@import url("styles/header.css");
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 15px;
+    color: #06426d;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header ul li {
+    padding: 10px;
+    list-style-type: none;
+}
+
+.btn {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 8px;
+    padding: 1px;
+    background-color: #06426d;
+}
+
+.btn.active {
+    position: absolute;
+    top: 300px;
+    align-self: center;
+}
+
+.btn.active .line1 {
+    transform: translateY(10.5px) translateX(5px) rotate(45deg) scale(0.6);
+}
+
+.btn.active .line2 {
+    opacity: 0;
+}
+
+.btn.active .line3 {
+    transform: translateY(-11.5px) translateX(-6px) rotate(-45deg) scale(0.6);
+}
+
+.line {
+    background-color: white;
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    padding: 10px;
+    transition: all .3s;
+}
+
+.line.line-1 {
+    top: 10%;
+}
+
+.line.line-2 {
+    top: 40%;
+}
+
+.line.line-3 {
+    top: 70%;
+}
+
+.menu.hide {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.show div {
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 5px 5px 0px 0px green;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 10px;
+    margin-right: 0px;
+}
+
+.show div:hover {
+    background-color: green;
+}
+
+.show li {
+    list-style-type: none;
+}
+
+.show a {
+    color: maroon;
+    text-decoration: none;
+}
