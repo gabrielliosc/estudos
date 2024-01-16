@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporizador do tipo pomodoro">
+
+    <title>Pomodoro</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="src/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <button class="header" id="toggle-mode">
+            <span class="sr-only">Ativar ligth mode!</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+        <div class="main">
+            <section id="pomodoro" class="pomodoro">
+                <img src="./assets/tomato_5.png" alt="Pausa curta" id="short-break">
+                <!-- <img src="./assets/long-break.png" alt="Pausa Longa" id="long-break"> -->
+                <!-- <img src="./assets/tomato_0.png" alt="Zerado"> -->
+                <img src="./assets/tomato_5.png" alt="5 minutos" id="five-minutes">
+                <img src="./assets/tomato_10.png" alt="10 minutos" id="ten-minutes">
+                <img src="./assets/tomato_15.png" alt="15 minutos" id="fifteen-minutes">
+                <img src="./assets/tomato_20.png" alt="20 minutos" id="twenty-minutes">
+                <img src="./assets/tomato_25.png" alt="25 minutos" id="twenty-five-minutes">
+            </section>
+
+            <section id="timer" class="timer flex">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+
+            <section id="controls" class="controls flex">
+                <button data-action="toggleRunning" class="ph ph-play-circle">
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+                <button data-action="toggleRunning" class="ph ph-pause-circle">
+                    <span class="sr-only">Pausar contador</span>
+                </button>
+                <button data-action="set" class="ph ph-timer secondary">
+                    <span class="sr-only">Ajustar contador</span>
+                </button>
+                <button data-action="reset" class="ph ph-stop-circle secondary">
+                    <span class="sr-only">Reiniciar contador</span>
+                </button>
+                <button data-action="toggleMusic" class="ph ph-speaker-none secondary">
+                    <span class="sr-only">Iniciar música</span>
+                </button>
+                <button data-action="toggleMusic" class="ph ph-speaker-high">
+                    <span class="sr-only">Parar música</span>
+                </button>
+            </section>
+        </div>
+
+        <section class="tomatos">
+            <span>Tomates preenchidos</span>
+            <img src="./assets/tomato_5.png" height="30px" width="30">
+            <img src="./assets/tomato_5.png" height="30px" width="30">
+            <img src="./assets/tomato_5.png" height="30px" width="30">
+            <img src="./assets/tomato_5.png" height="30px" width="30">
+        </section>
+        <section class="options">
+            <button data-action="toggleOption">
+                Pausa curta(5 minutos)
+            </button>
+            <button data-action="toggleOption">
+                Pausa longa(2 horas)
+            </button>
+        </section>
+    </div>
+</body>
+</html>
