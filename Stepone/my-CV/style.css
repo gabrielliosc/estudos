@@ -1,0 +1,203 @@
+/*Correção*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Vithkuqi&family=Open+Sans&display=swap'); /*Fonte que esta no arquivo do Figma*/
+
+@media(min-width: 992px) {
+    .container{
+        display: flex;
+    }
+    .about img{
+        width: 200px;
+        height: 200px;
+    }
+    .experience .descricao{
+        display: flex;
+    }
+    .experience .descricao .experience-date{
+        width: 300px;
+    }
+}
+
+*{ /*----Elementos importantes no começo do projeto---*/
+    margin: 0; /*IMPORTANTE!! Para "Limpar" as margens default*/
+    padding: 0;/*IMPORTANTE!! Para "Limpar" os paddings default*/
+    box-sizing: border-box;
+    /*----------------------------------------------*/
+    font-family: 'Open Sans', sans-serif;
+}
+/*
+.container{
+    Valor consultado no Figma
+}*/
+.about{
+    padding: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.about hr{
+    border: none;
+    border-bottom: 1px solid #990580;
+    margin-top: 18px;
+}
+.about img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid #990580;
+    margin-bottom: 18px;
+}
+.about h3{
+    text-align: left;
+    margin-top: 20px;
+}
+.about ul{
+    list-style-type: none;
+}
+.about li{
+    text-align: left;
+    margin: 10px 0;
+}
+.contact a{
+    color: white;
+    text-decoration: none;
+}
+.contact i{
+    color: #990580;
+    margin-right: 10px;
+}
+.education {
+    margin-top: 32px;
+}
+.education p {
+    color: #990580;
+}
+.languages .percent{
+    height: 6px;
+    background-color: #990580;
+    margin-top: 5px;
+    width: 205px;    
+}
+.languages .percent div{
+    height: 6px;
+    background-color: #ca77bc;   
+}
+.languages .percent.english div{ /*Usando o percent.english junto para indicar as duas classes no mesmo elemento e nesse caso estamos diminuindo a div interna*/
+    width: 80%;
+}
+.languages .percent.japanese div{
+    width: 20%;
+}
+.languages .percent.french div{
+    width: 20%;
+}
+.main {
+    background-color: white;
+    padding: 40px;
+    color: black;
+}
+.main section{
+    margin-bottom: 30px;
+}
+.main h2 {
+    margin-bottom: 15px;
+}
+.main ul{
+    list-style-type: none;
+}
+.experience .descricao{
+    margin-bottom: 14px;
+}
+.projects .descricao{
+    margin-bottom: 14px;
+}
+footer{
+    text-align: end;
+}
+
+
+/*Meu Código
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Noto+Sans+Vithkuqi&family=Open+Sans&display=swap');
+
+@media(min-width: 992px) {
+    body{
+        display: flex;
+        flex-direction: row;
+    }
+    .work{
+        display: flex;
+    }
+    h4 {
+        width: 118px;
+        height: 53px;
+        text-align: left;
+    }
+}
+rect{
+    fill: rgb(199, 115, 202);
+    stroke-width:3;
+    stroke: rgb(0,0,0);
+}
+body{
+    font-family: 'Noto Sans Vithkuqi', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+}
+h1, h2, h3, h4{
+    font-weight: normal;
+}
+p{
+    line-height: 15px;
+    font-size: 14px;
+}
+ul{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+li{
+    padding: 5px 0px;
+    text-align: justify;  
+}
+i {
+    padding-right: 5px;
+    color: rgb(199, 115, 202);
+}
+
+footer{
+    font-size: 12px;
+    font-style: italic;
+    text-align: end;
+}
+.about{
+    padding: 0px 15px;
+    background-color: black;
+    color: white;
+}
+.main{
+    padding: 0px 15px;
+    background-color: white;
+    color: black;
+}
+h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+.icons{
+    display: flex;
+    align-items: center;
+}
+.line{
+    text-decoration: line-through rgb(199, 115, 202);
+    color: (0,0,0);
+}
+.period{
+    color: rgb(199, 115, 202);
+
+}
+#profile{
+    height: 200px;
+    width: 200px;
+    border-radius: 40%;
+    border: 3px solid rgb(199, 115, 202);
+}*/
