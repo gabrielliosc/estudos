@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100..900&display=swap');
+
+:root{
+    --pink: #B52184;
+    --blue: #312D64;
+    --neutral-white: #FFFFFF;
+    --gradient: linear-gradient(210deg, #343193 0%, #302C63 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 30px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    max-width: 1440px;
+}
+header h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--pink);
+}
+header p{
+    font-size: 24px;
+    color: var(--blue);
+    font-weight: 600;
+}
+header .column{
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+    margin-bottom: 30px;
+}
+header .column img{
+    height: 105px;
+    width: 60px;
+}
+section.cards{
+    background: var(--gradient);
+    padding: 64px 100px;
+}
+section.cards ul{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 50px;
+}
+section.cards ul li{
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background-color: var(--neutral-white);
+    border-radius: 24px;
+    width: 300px;
+}
+section.cards ul li img{
+    height: 97px;
+    width: 97px;
+    margin-bottom: 40px;
+}
+section.cards ul li h2{
+    color: var(--pink);
+    font-weight: 800;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+section.cards ul li p{
+    color: var(--blue);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+section.cta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 92px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+section.cta form h2{
+    color: var(--pink);
+    font-weight: 800;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+section.cta form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    margin-left: 60px;
+}
+section.cta textarea{
+    height: 120px;
+}
+section.cta input, section.cta textarea {
+    min-width: 400px;
+}
+section.cta input, section.cta textarea, section.cta button{
+    border-radius: 16px;
+    padding: 16px;
+}
+section.cta input{
+    padding-left: 45px;
+}
+section.cta .input {
+    position: relative;
+}
+section.cta .input img{
+    position: absolute;
+    top: 12px; 
+    left: 14px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+section.cta button{
+    color: var(--neutral-white);
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    background: var(--gradient);
+}
+input#nome::before{
+    background-image: url('./assets/img/user.svg');
+}
+footer {
+    padding: 16px;
+    text-align: center;
+    color: var(--neutral-white);
+    background: var(--gradient);
+}
+@media only screen and (max-width: 600px) {
+    header{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 17px;
+    }
+    header h1 {
+        font-size: 30px;
+    }
+    header p{
+        font-size: 18px;
+    }
+    header img{
+        width: 350px;
+    }
+    header .column{
+        align-items: center;
+        text-align: center;
+        gap: 35px;
+    }
+    section ul{
+        flex-direction: column;
+        gap: 50px;
+    }
+    section ul li{
+        width: auto;
+    }
+    section{
+        flex-direction: column;
+    }
+    section.cards {
+        padding: 53px 39px;
+        width: 100%
+    }
+    section.cta img.stars{
+        display: none;
+    }
+    section.cta input, section.cta textarea {
+        min-width: 0px;
+        width: 300px;
+    }
+    section.cta form{
+        margin: 70px auto;
+    }
+}
