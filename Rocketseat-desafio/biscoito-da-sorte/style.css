@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&display=swap');
+
+:root{
+    --gradient: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+    --white: #fff;
+    --blue: #34355B;
+    --orange: #FF9500;
+    --background: #E4EDF1;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+    height: 100vh;
+    width: 100vw;
+    font-size: 16px;
+    font-family:'Montserrat', sans-serif;
+    color: var(--blue);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    width: fit-content;
+    padding: 64px;
+    padding-top: 48px;
+    text-align: center;
+    border-radius: 5px;
+}
+main h1{
+    font-size: 24px;
+    margin-bottom: 14px;
+    max-width: 250px;
+    font-weight: 700;
+}
+main h1#title-opened{
+    max-width: 290px;
+}
+main p.open{
+    margin-bottom: 20px;
+    max-width: 250px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+main p.message{
+    margin-bottom: 20px;
+    padding: 10px;
+    max-width: 290px;
+    background-color: var(--background);
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    font-size: 24px;
+}
+main button{
+    font-family: "DM Sans", sans-serif;
+    padding: 16px;
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+main p.message{
+    position: relative;
+    animation: grow 3s;
+}
+main img#closed-cookie:hover{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.none{
+    display: none;
+}
+
+@keyframes shake {
+    10%, 90% {
+    transform: translate3d(-1px, -1px, 0);
+    }
+    
+    20%, 80% {
+    transform: translate3d(2px, 2px, 0);
+    }
+
+    30%, 50%, 70% {
+    transform: translate3d(-4px, -4px, 0);
+    }
+
+    40%, 60% {
+    transform: translate3d(4px, 4px, 0);
+    }
+}
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes grow {
+    from {
+        font-size: 0px;
+        width: 0px;
+        height: 0px;
+        top: 150px;
+    }
+
+    to {
+        font-size: 24px;
+        width: 293px;
+        height: 107px;
+        top: 0px
+    }
+}
