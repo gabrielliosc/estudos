@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #E1E1E6;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    width: 100vw;
+}
+body:has(main.home){
+    background: url('./assets/img/mountains-universe-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body:has(main.home) nav li.home__nav a{
+    color: #FFF;
+}
+body:has(main.home) nav li.universo__nav a, body:has(main.home) nav li.exploracao__nav a{
+    color: #C4C4CC;
+}
+body:has(main.universo){
+    background: url('./assets/img/mountains-universe02.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body:has(main.universo) nav li.universo__nav a{
+    color: #FFF;
+}
+body:has(main.universo) nav li.home__nav a, body:has(main.universo) nav li.exploracao__nav a{
+    color: #C4C4CC;
+}
+body:has(main.exploracao){
+    background: url('./assets/img/mountains-universe-3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body:has(main.exploracao) nav li.exploracao__nav a{
+    color: #FFF;
+}
+body:has(main.exploracao) nav li.home__nav a, body:has(main.exploracao) nav li.universo__nav a{
+    color: #C4C4CC;
+}
+body:has(main.404){
+    background-color: #02799D;
+    display: flex;
+    align-items: center;
+}
+main.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 172px;
+    gap: 24px;
+}
+main.universo, main.exploracao{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 63px;
+    padding-left: 104px;
+    width: 648px;
+    line-height: 160%;
+    gap: 16px;
+}
+header{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    padding: 40px 72px;
+    font-size: 20px;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 32px;
+}
+header nav li a{
+    text-decoration: none;
+}
+main h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+main button {
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 32px;
+    color: #FFF;
+    background: transparent;
+    border: 1px solid #FFF;
+    cursor: pointer;
+}
+main button:hover {
+    color: #02799D;
+    background: #FFF;
+}
