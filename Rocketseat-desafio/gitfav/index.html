@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/svg">
+    <title>GithFav</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="js/main.js" defer></script> 
+</head>
+<body>
+    <div id="app">
+        <header>
+            <img src="./assets/img/gitfav.svg" alt="" class="logo">
+            <div class="search">
+                <label class="sr-only" for="input-search">Digite o Github username que quer favoritar</label>
+                <input type="text" id="input-search" placeholder="Digite o Github username que quer favoritar">
+                <button>&star; Favoritar</button>
+            </div>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>Repositórios</th>
+                    <th>Seguidores</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
