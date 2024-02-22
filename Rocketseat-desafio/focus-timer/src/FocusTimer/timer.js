@@ -29,12 +29,11 @@ export function countdown() {
 
     updateDisplay(minutes, seconds)
 
-    state.countdownId = setTimeout(() => countdown(), 1000) //Recursão a cada 1s
-    //countdownId - O setTimeout retorna um id ao ser criado por padrão, estamos guardando esse id para excluir o setTimeout que estiver na espera 
+    state.countdownId = setTimeout(() => countdown(), 1000)
 }
 
 export function updateDisplay(minutes, seconds) {
-    minutes = minutes ?? state.minutes // nullish coaleshing operator
+    minutes = minutes ?? state.minutes
     seconds = seconds ?? state.seconds
 
     el.minutes.textContent = String(minutes).padStart(2, "0") 
