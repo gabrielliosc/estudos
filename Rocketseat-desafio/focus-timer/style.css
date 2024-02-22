@@ -106,10 +106,8 @@ div#choices button{
     border-radius: 24px;
 }
 /* controls */
-.running .ph-play-circle,
 .running .ph-timer,
 html:not(.running) .ph-pause-circle,
-/* html:not(.running) .ph-stop-circle, */
 html:not(.music-on) .ph-speaker-high {
     display: none;
 }
