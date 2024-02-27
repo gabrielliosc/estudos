@@ -39,11 +39,14 @@ class UsersController {
     
     async update(request, response){
         const { name, email, password, old_password } = request.body
-        const { id } = request.params
+        // const { id } = request.params
+
+        //Após o uso de middlewares trocar o id pelo user_id
+        const user_id = request.user.id
 
         const database = await sqliteConnection()
         //Verificações
-        const user = await database.get("SELECT * FROM users WHERE id = (?)", [id])
+        const user = await database.get("SELECT * FROM users WHERE id = (?)", [user_id])
 
         if(!user) {
             throw new AppError("Usuário não encontrado")
@@ -79,7 +82,7 @@ class UsersController {
             password = ?,
             updated_at = DATETIME('now')
             WHERE id =?`,
-            [user.name, user.email, user.password, id]
+            [user.name, user.email, user.password, user_id]
         )
 
         return response.status(200).json()
