@@ -81,6 +81,7 @@ class NotesController {
                 .whereLike("notes.title",`%${title}%`)
                 .whereIn("name", filterTags)
                 .innerJoin('notes', 'notes.id', 'tags.note_id')
+                // .groupBy("tag.name")
                 .orderBy("notes.title")
         } 
         else {

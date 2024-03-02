@@ -1,23 +1,39 @@
 const { hash, compare } = require("bcryptjs")
 const AppError = require('../utils/AppError')
 const sqliteConnection = require("../database/sqlite")
+const UserRepository = require("../repositories/UserRepository")
+const UserCreateService = require("../services/UserCreateService")
 
 class UsersController {
     async create(request, response){
+        // Antes de dividir em repository
+        // const { name, email, password} = request.body
+
+        // const database = await sqliteConnection()
+        // const checkUserExists = await database.get("SELECT * FROM users WHERE email = (?)", [email])
+
+        // if (checkUserExists) {
+        //     throw new AppError("Esse e-mail já está em uso.")
+        // }
+
+        // const hashedPassword = await hash(password, 8)
+
+        // await database.run("INSERT INTO users (name, email, password) VALUES (?, ?, ?)", [name, email, hashedPassword])
+
+        // return response.status(201).json()
+
+        //Inversão de dependência
         const { name, email, password} = request.body
 
-        const database = await sqliteConnection()
-        const checkUserExists = await database.get("SELECT * FROM users WHERE email = (?)", [email])
+        const userRepository = new UserRepository()
 
-        if (checkUserExists) {
-            throw new AppError("Esse e-mail já está em uso.")
-        }
+        const userCreateService = new UserCreateService(userRepository) //Istancia com o repository 
 
-        const hashedPassword = await hash(password, 8)
-
-        await database.run("INSERT INTO users (name, email, password) VALUES (?, ?, ?)", [name, email, hashedPassword])
+        await userCreateService.execute({ name, email, password})
 
         return response.status(201).json()
+
+        
     }
 
     /** Padrão de funções do controller
@@ -40,7 +56,7 @@ class UsersController {
     async update(request, response){
         const { name, email, password, old_password } = request.body
         // const { id } = request.params
-
+        console.log(name, email, password, old_password)
         //Após o uso de middlewares trocar o id pelo user_id
         const user_id = request.user.id
 
